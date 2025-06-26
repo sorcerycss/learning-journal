@@ -1,0 +1,72 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #0e0e0e;
+  margin: 0;
+
+  background: #b40ad6;
+}
+
+/* === Layout === */
+
+.grid-main {
+  display: grid;
+  grid-template-columns: minmax(1em, 1fr);
+}
+
+/* === Typography === */
+
+.logo-text {
+  font-size: 0.847rem;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+}
+
+/* = Header = */
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-main {
+  display: flex;
+  align-items: center;
+}
+
+/* = Navigation = */
+
+.nav {
+  align-self: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+}
+
+.nav-item {
+  margin-left: 1em;
+}
+
+.nav-link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #090909;
+}
+
+/* = Hero section = */
+
+.hero {
+  background: url("/img/hero-image.png");
+  background-size: cover;
+  background-position: bottom;
+  color: #fff;
+}
