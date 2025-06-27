@@ -5,18 +5,52 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   color: #0e0e0e;
   margin: 0;
+}
 
-  background: #b40ad6;
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.image-full {
+  max-height: 232px;
+  width: 100%;
+  object-fit: cover;
 }
 
 /* === Layout === */
 
-.grid-main {
+.article-recent {
   display: grid;
-  grid-template-columns: minmax(1em, 1fr);
+  grid-template-columns: 1em 1fr 1em;
+  grid-template-areas:
+    ". image ."
+    ". date ."
+    ". title ."
+    ". text .";
+}
+
+.article-image {
+  grid-area: image;
+}
+
+.article-title {
+  grid-area: title;
+}
+
+.article-text {
+  grid-area: text;
+}
+
+.article-date {
+  grid-area: date;
+}
+
+.header {
+  padding: 1em;
 }
 
 /* === Typography === */
@@ -27,7 +61,43 @@ body {
   letter-spacing: 0.6px;
 }
 
-/* = Header = */
+/* = Article = */
+
+.article-title {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.article-text {
+  color: #505050;
+}
+
+.article-text-hero {
+  color: #fff;
+}
+
+.article-date {
+  font-size: 0.886rem;
+}
+
+.article-hero-title {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.footer-text {
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.footer-fine-print {
+  font-size: 0.75rem;
+  margin-top: 0;
+}
+
+/* = Header section = */
 
 header {
   display: flex;
@@ -43,6 +113,7 @@ header {
 
 .nav {
   align-self: center;
+  grid-column: 2;
 }
 
 .nav-list {
@@ -62,11 +133,34 @@ header {
   color: #090909;
 }
 
+/* === Main === */
+
 /* = Hero section = */
 
 .hero {
   background: url("/img/hero-image.png");
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
+  align-content: end;
+  height: 50vh;
   color: #fff;
+  margin-bottom: 2em;
+}
+
+/* = Footer section = */
+
+.view-more {
+  display: block;
+  text-align: center;
+  margin-bottom: 3em;
+  color: black;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+}
+
+.footer {
+  background: #202020;
+  color: #fff;
+  text-align: center;
+  padding: 1em;
 }
